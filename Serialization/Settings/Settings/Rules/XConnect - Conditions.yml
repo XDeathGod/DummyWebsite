@@ -1,0 +1,18 @@
+﻿---
+ID: "0a270ef0-1a3b-4f29-a296-4b69023ab679"
+Parent: "1057c235-c5c0-4eb7-8f77-ea51eb9e20ee"
+Template: "dda66314-03f3-4c89-84a9-39dffb235b06"
+Path: "/sitecore/system/Settings/Rules/XConnect - Conditions"
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{CBA86714-915A-48BC-B17D-A81A29CA8E35}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20161124T171904Z

@@ -1,0 +1,14 @@
+﻿---
+ID: "5dad3df6-c7aa-47ee-86f0-855fc14b120f"
+Parent: "1454b0f0-a4c6-4c3d-b4a9-06246a096907"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Sitecore Demo/Social Media/Location Item/Location Details
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200125T181257Z

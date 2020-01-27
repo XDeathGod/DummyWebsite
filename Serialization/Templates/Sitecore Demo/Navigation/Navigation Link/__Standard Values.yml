@@ -1,0 +1,25 @@
+﻿---
+ID: "a61a21df-b265-4bdb-a457-ab8c579fb064"
+Parent: "ee3ad400-7e0e-4385-ac60-8293a1d7b81b"
+Template: "ee3ad400-7e0e-4385-ac60-8293a1d7b81b"
+Path: /sitecore/templates/Sitecore Demo/Navigation/Navigation Link/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/star_grey.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200125T180408Z
+    - ID: "49c99a72-dcf6-474b-ae70-61366cc02418"
+      Hint: Title
+      Value: $name
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

@@ -1,0 +1,23 @@
+﻿---
+ID: "46995097-873b-45bf-942e-a788d3db1157"
+Parent: "aab4d04e-38f8-4088-899c-f911cf6b07be"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/system/Settings/Forms/Meta Data/Conditions/Action Types
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{41EEEC31-BF4C-4465-8638-77BDC96B5577}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180327T093137Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

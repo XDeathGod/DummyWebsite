@@ -1,0 +1,19 @@
+﻿---
+ID: "138ba357-4a2d-4849-9b69-86e0fc68c76d"
+Parent: "9046a4aa-07d9-4377-8a6e-1db27765b2ba"
+Template: "6ea02006-b973-4826-bdfc-c8122c7b865a"
+Path: /sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Delay/Parameters
+DB: master
+BranchID: "922570a5-c76a-424a-9e2c-e2d7c2d7ec0e"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F9952D92-6CE6-43FF-A322-186650462DF6}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170227T125136Z

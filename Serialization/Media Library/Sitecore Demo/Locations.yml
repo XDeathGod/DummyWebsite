@@ -1,0 +1,14 @@
+﻿---
+ID: "7a28066a-da4e-4ec7-83c1-bba1d7bb1af7"
+Parent: "a6769d22-789c-4114-8632-c8ce2a3d5bf0"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Sitecore Demo/Locations
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200126T035337Z

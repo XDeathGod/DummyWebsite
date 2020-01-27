@@ -1,0 +1,22 @@
+﻿---
+ID: "69be9960-5af1-4487-b7a8-c681bf504b9b"
+Parent: "7e814d8e-bdd0-440b-adf4-922583fe36ae"
+Template: "7e814d8e-bdd0-440b-adf4-922583fe36ae"
+Path: /sitecore/templates/Sitecore Demo/Identity/Logo/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Apps/32x32/Technology.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200125T175020Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

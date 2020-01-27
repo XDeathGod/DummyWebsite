@@ -1,0 +1,22 @@
+﻿---
+ID: "42627ee2-b0c0-4e0c-8333-45eaaa528d83"
+Parent: "8c644d10-e296-4226-8f1f-118fca9a2fc5"
+Template: "8c644d10-e296-4226-8f1f-118fca9a2fc5"
+Path: /sitecore/templates/Sitecore Demo/Identity/Copyright/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Imaging/32x32/pyramid_h.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200125T175611Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

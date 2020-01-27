@@ -1,0 +1,14 @@
+﻿---
+ID: "431b40f5-8683-4704-bac3-8568ba61a99a"
+Parent: "97c3b8d2-2ac7-47c7-99c4-df15f189be2e"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Sitecore Demo/Social Media/Social Media Item/Social Media Channel Details
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200125T181014Z

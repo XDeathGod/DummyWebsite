@@ -1,0 +1,18 @@
+﻿---
+ID: "9e05c456-5cd0-405b-9d45-31ddd92ab8e4"
+Parent: "913cb100-444f-4327-9615-21cba7c8ecf9"
+Template: "4a6a7e36-2481-438f-a9ba-0453ecc638fa"
+Path: /sitecore/system/Settings/Content Testing/Personalization Suggestions/No pattern match
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "fe732790-2ddb-4657-a882-c2fce1fbf0c9"
+    Hint: Name
+    Value: No pattern match
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180921T041553Z

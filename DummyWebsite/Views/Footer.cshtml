@@ -1,0 +1,33 @@
+﻿@using Sitecore
+@using Sitecore.Mvc
+@using Sitecore.Data
+@using Sitecore.Data.Items
+@using DummyWebsite
+
+@{ 
+    Database currentDb = Sitecore.Context.Database;
+    Item homeItem = currentDb.GetItem("{4EE07053-BE8F-4756-9A32-EF70E2C5DC20}"); //Get the item /sitecore/content/Home
+}
+
+
+<footer class="footer">
+    <div class="footer_top">
+        <div class="container">
+        @Html.Sitecore().Rendering("{E280441D-9D09-44DD-BF28-302747A7FE07}")
+        </div>
+    </div>
+    <div class="copy-right_text">
+        <div class="container">
+            <div class="footer_border"></div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <p class="copy_right text-center">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        @Html.Sitecore().Field(Templates.Copyright.Fields.Text_FieldName,homeItem)
+                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

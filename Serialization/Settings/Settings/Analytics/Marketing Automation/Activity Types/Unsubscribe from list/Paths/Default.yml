@@ -1,0 +1,21 @@
+﻿---
+ID: "7ae80628-de2d-4d83-9d89-c47a02a6e674"
+Parent: "2808a01b-3a93-49b6-8251-b7668758d2c5"
+Template: "3505f93a-1bbd-4ea4-bfab-09f44e88a594"
+Path: /sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Unsubscribe from list/Paths/Default
+DB: master
+SharedFields:
+- ID: "ec7ee750-6c26-4def-aa5f-71dcd3a875de"
+  Hint: Key
+  Value: default
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "229cea16-4ad6-495a-aa42-0e0e05709162"
+      Hint: Name
+      Value: Default
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170322T105231Z

@@ -1,0 +1,14 @@
+﻿---
+ID: "41509cde-bda6-4d48-a259-efa2ffd3c144"
+Parent: "14db786b-9d5c-409e-bd2d-f25475e475a1"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Sitecore Demo/Common/Summary/Summary Details
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200125T181539Z

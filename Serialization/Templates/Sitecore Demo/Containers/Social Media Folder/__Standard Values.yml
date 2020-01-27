@@ -1,0 +1,26 @@
+﻿---
+ID: "980123e7-15bc-4bc4-a320-cbeef7dc0715"
+Parent: "a4de1167-631e-42bf-9cf7-42e45b36d501"
+Template: "a4de1167-631e-42bf-9cf7-42e45b36d501"
+Path: /sitecore/templates/Sitecore Demo/Containers/Social Media Folder/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/folder_green.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{97C3B8D2-2AC7-47C7-99C4-DF15F189BE2E}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200125T184344Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

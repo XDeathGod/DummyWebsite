@@ -1,0 +1,14 @@
+﻿---
+ID: "19ca7a2e-cb39-4591-9b3c-f9c1ddc4c445"
+Parent: "6d1520f6-5623-41c5-8de4-ff00c9f8e9f0"
+Template: "85ef43db-712d-4fc8-a29f-5e8b65bc185a"
+Path: /sitecore/system/Settings/Analytics/Marketing Automation/Editor Types
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170221T112617Z

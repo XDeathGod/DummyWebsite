@@ -1,0 +1,14 @@
+﻿---
+ID: "90ea1640-c58f-49b1-a707-82387f01da8c"
+Parent: "9d57e9c9-69c2-4ebc-82ed-5262486f9a23"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Sitecore Demo/Social Media
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200125T174320Z

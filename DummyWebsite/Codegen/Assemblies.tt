@@ -1,0 +1,4 @@
+<#@ assembly name="I:\Logistic\DummyWebsite\DummyWebsite\Libraries\Rainbow.dll" #>
+<#@ assembly name="I:\Logistic\DummyWebsite\DummyWebsite\Libraries\Rainbow.Storage.Yaml.dll" #>
+<#@ assembly name="I:\Logistic\DummyWebsite\DummyWebsite\Libraries\Sitecore.Kernel.dll" #>
+

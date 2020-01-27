@@ -1,0 +1,25 @@
+﻿---
+ID: "b7591207-7db6-4eff-be56-fc187182d87c"
+Parent: "5d6107f6-7000-454c-b8dd-d91491dc598a"
+Template: "5d6107f6-7000-454c-b8dd-d91491dc598a"
+Path: /sitecore/templates/Sitecore Demo/Common/City/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Apps/32x32/Pictures.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200125T181811Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "b487d640-6761-4880-9657-bc488b82ace5"
+      Hint: City Name
+      Value: $name

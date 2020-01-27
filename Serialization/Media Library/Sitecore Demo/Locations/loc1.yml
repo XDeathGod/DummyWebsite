@@ -1,0 +1,40 @@
+﻿---
+ID: "411a398e-f82a-408d-b4bc-d0395db58a1d"
+Parent: "7a28066a-da4e-4ec7-83c1-bba1d7bb1af7"
+Template: "daf085e8-602e-43a6-8299-038ff171349f"
+Path: /sitecore/media library/Sitecore Demo/Locations/loc1
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/411A398EF82A408DB4BCD0395DB58A1D.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 25
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "cef2312e-7424-4ad2-a66c-f90884938b35"
+  Value: /9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oLCUoKSgBBwcHCggKEwoKEygaFhooKCcoKCUoJSYoKCgoKCIoKR0dKCUiJyUoJCglICgeJSclJyUdKCUlHSUoJyUlJSUmJf/AABEIABkAGQMBEQACEQEDEQH/xAAaAAACAgMAAAAAAAAAAAAAAAAFBgIHAwQI/8QALxAAAQQBAQMKBwEAAAAAAAAAAQIDBAUAERIhQQYTFCIxMkJRYbEXN1NUcnOiFf/EABoBAAMBAQEBAAAAAAAAAAAAAAQFBgMCAQD/xAArEQABAwMBBgUFAAAAAAAAAAACAAEDBBEhMQUSExZRUhVBcYGxFCI0NWH/2gAMAwEAAhEDEQA/AOe6KFEiVjlzaN8+2lfNx4+ugdXxJ9BgkxkZ8KP3Tmjgjiieqna/RuqkeWlsDss9GajcGEMI2PbOXoIny7Z6rTmCrD7Rew9FOxah3dQ9ZwmExpsYjpLDe5CknxpHDfwz4COGRoyyz6LyYIqyF542sQ6pWw3CS7rKx7GLAEOXRORuccqoan0vlwjrq2Sdw/LjiiFzImqGLBeSsa2KAQehccx+fqq4Om/G+ijX1snalg1H+ZSomQC89ZOraLyXlJKNFAAgdh7cXTHLvm4lgVTUlNS8CHiBdzvm6K/DdH3f84H4qfamnLEfchcnlLUyGZ8ssy0WkyNzCx1S1roBr5+EYZHSmFgvhkqqNq087nLaxkg9TyUs7atVNhIbWgL2EpKwFK89Nd2by1kcR7hOgKbY1RVRPNE2Eyq6HyeqqVF428bGItx1thlaSAdoEbZ4DcOz1wMd6eQ+E+HsnLvHs+CH6hrmN8LT+I0/6DWd+Gf1cc1H2JGPdGM1Jvonao+XNn+9PunFsv5Iqtof1Mnt8pPe7ww8FOTarDmyDX//2Q==
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 748
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/jpeg
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: jpg
+- ID: "cb09946f-3218-4823-87d2-d5007c199a96"
+  Hint: Dimensions
+  Value: 25 x 25
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 25
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200126T035748Z

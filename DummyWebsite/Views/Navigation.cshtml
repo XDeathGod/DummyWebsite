@@ -1,0 +1,85 @@
+﻿@using Sitecore
+@using Sitecore.Mvc
+@using Sitecore.Data
+@using Sitecore.Data.Items
+@using DummyWebsite
+@model List<Item>
+
+@if (Model == null || Model.Count <= 0)
+{
+    return;
+}
+
+@{
+    Database currentdb = Sitecore.Context.Database;
+
+    Item homeItem = currentdb.GetItem("{4EE07053-BE8F-4756-9A32-EF70E2C5DC20}"); //Get the item /sitecore/content/Home
+
+}
+<div id="sticky-header" class="main-header-area">
+    <div class="container">
+        <div class="header_bottom_border">
+            <div class="row align-items-center">
+                <div class="col-12 d-block d-lg-none">
+                    <div class="logo">
+                        @*<a href="index.html">
+                                <img src="img/logo.png" alt="">
+                            </a>*@
+                        @Html.Sitecore().Field(Templates.Logo.Fields.Link_FieldName, homeItem,
+                                 new { text = Html.Sitecore().Field(Templates.Logo.Fields.Image_FieldName, homeItem) })
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                    <div class="main-menu  d-none d-lg-block">
+                        <nav>
+                            <ul id="navigation">
+                                @foreach (Item menuItem in Model)
+                                {
+                                    if (menuItem.GetChildren().Count > 0)
+                                    {
+                                        <li>
+                                            @Html.Sitecore().Field(Templates.NavigationLink.Fields.Link_FieldName, menuItem,
+                                              new { text = Html.Sitecore().Field(Templates.NavigationLink.Fields.Title_FieldName, menuItem) + "<i class=\"ti-angle-down\"></i>" })
+
+                                            <ul class="submenu">
+                                                @foreach (Item childMenuItem in menuItem.GetChildren())
+                                                {
+                                                    <li>
+                                                        @Html.Sitecore().Field(Templates.NavigationLink.Fields.Link_FieldName, childMenuItem,
+                                                       new { text = Html.Sitecore().Field(Templates.NavigationLink.Fields.Title_FieldName, childMenuItem) })
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </li>
+
+                                    }
+
+                                    else
+                                    {
+                                        <li>
+                                            @Html.Sitecore().Field(Templates.NavigationLink.Fields.Link_FieldName, menuItem,
+                                                                                             new { text = Html.Sitecore().Field(Templates.NavigationLink.Fields.Title_FieldName, menuItem) })
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                    <div class="Appointment justify-content-end">
+                        <div class="search_btn">
+                            <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
+                                <i class="ti-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

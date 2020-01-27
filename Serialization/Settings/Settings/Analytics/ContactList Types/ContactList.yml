@@ -1,0 +1,14 @@
+﻿---
+ID: "58c00094-60ed-45da-ba6e-06a9c1e4e7d1"
+Parent: "7b6f99f4-c060-44f7-9ca1-812fe9721b17"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/system/Settings/Analytics/ContactList Types/ContactList
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170310T142723Z

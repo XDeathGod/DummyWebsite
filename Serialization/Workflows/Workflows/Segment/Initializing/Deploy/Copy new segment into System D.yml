@@ -1,0 +1,22 @@
+﻿---
+ID: "451aec86-2edb-45cb-81a3-8af4bbf4e7f0"
+Parent: "7ea08f55-2b1d-4992-921f-703011439239"
+Template: "66882e97-c8aa-4e37-8901-7a8aa35ed2ed"
+Path: /sitecore/system/Workflows/Segment/Initializing/Deploy/Copy new segment into System Dimension
+DB: master
+SharedFields:
+- ID: "a291a22b-99e2-46bb-a27b-8ec744275396"
+  Hint: Type
+  Value: Sitecore.ExperienceAnalytics.Aggregation.Workflows.CopySegmentAction, Sitecore.ExperienceAnalytics.Aggregation
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190702T085942Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

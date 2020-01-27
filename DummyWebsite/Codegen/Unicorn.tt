@@ -1,0 +1,182 @@
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Xml" #>
+
+<#@ import namespace="Rainbow.Model" #>
+<#@ import namespace="Rainbow.Storage.Yaml" #>
+<#@ import namespace="Sitecore" #>
+
+// ReSharper disable InconsistentNaming
+namespace <#= BaseNamespace#>
+{
+    public static partial class Templates
+    {
+<#
+foreach (var data in GetTemplateData())
+{
+    var template = data.Template;
+    var fields = data.Fields;
+#>
+        #region <#= template.Path#>
+        /// <summary>
+        ///   <#= template.Name#>
+        ///   <para>ID: <#= template.Id.ToString("B").ToUpper()#></para>
+        ///   <para>Path: <#= template.Path#></para>
+        /// </summary>
+        public static class <#= GetClassName(template)#>
+        {
+            public static readonly Sitecore.Data.TemplateID ID = new Sitecore.Data.TemplateID(new Sitecore.Data.ID("<#= template.Id.ToString("B").ToUpper()#>"));
+            public const string IdString = "<#= template.Id.ToString("B").ToUpper()#>";
+
+<#
+        if (fields.Any())
+        {
+#>
+            public static class Fields
+            {
+<#
+            foreach (var field in fields)
+            {
+#>
+                /// <summary>
+                ///   <#= field.Name#>
+                ///   <para><#= field.Id.ToString("B").ToUpper()#></para>
+                /// </summary>
+                public static readonly Sitecore.Data.ID <#= GetFieldName(field)#> = new Sitecore.Data.ID("<#= field.Id.ToString("B").ToUpper()#>");
+
+                /// <summary>
+                ///   <#= field.Name#>
+                ///   <para><#= field.Id.ToString("B").ToUpper()#></para>
+                /// </summary>
+                public const string <#= GetFieldName(field)#>_FieldName = "<#= field.Name#>";
+
+<#          }#>
+            }
+<#      }#>
+        }
+        #endregion
+<#
+}
+#>
+    }
+}
+
+
+<#+
+
+public string GetClassName(IItemData template)
+{
+    return AsValidWord(template.Name);
+}
+
+public string GetFieldName(IItemData field)
+{
+    return AsValidWord(field.Name);
+}
+
+public string GetFullNamespace(IItemData template)
+{
+    var path = template.Path;
+
+    if (!string.IsNullOrEmpty(IgnoreNamespacePath))
+    {
+        path = Regex.Replace(path, "^" + IgnoreNamespacePath, "", RegexOptions.IgnoreCase);
+    }
+
+    var parts = path.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+    parts = parts.Select(AsValidWord).ToArray();
+    var templateNamespace = string.Join(".", parts.Take(parts.Length - 1));
+
+    return JoinNamespaces(BaseNamespace, CustomNamespace, templateNamespace);
+}
+
+public string JoinNamespaces(params string[] namespaces)
+{
+    return string.Join(".", namespaces.Where(x => !string.IsNullOrEmpty(x)));
+}
+
+public string AsValidWord(string part)
+{
+    part = TitleCase(part);
+    part = part.Replace(" ", "");
+    part = Regex.Replace(part, "^_", "");
+    part = part.Replace("-", "");
+    while (Regex.IsMatch(part, "^\\d"))
+    {
+        part = Regex.Replace(part, "^1", "One");
+        part = Regex.Replace(part, "^2", "Two");
+        part = Regex.Replace(part, "^3", "Three");
+        part = Regex.Replace(part, "^4", "Four");
+        part = Regex.Replace(part, "^5", "Five");
+        part = Regex.Replace(part, "^6", "Six");
+        part = Regex.Replace(part, "^7", "Seven");
+        part = Regex.Replace(part, "^8", "Eight");
+        part = Regex.Replace(part, "^9", "Nine");
+    }
+    return part;
+}
+
+public static string TitleCase(string word)
+{
+    word = Regex.Replace(word, "([a-z](?=[A-Z])|[A-Z](?=[A-Z][a-z]))", "$1+");
+    word = System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(word);
+    word = word.Replace("+", "");
+    return word;
+}
+
+public IEnumerable<TemplateData> GetTemplateData() {
+    var serializer = new YamlSerializationFormatter(null, null);
+
+    var files = Configurations.SelectMany(x => Directory.EnumerateFiles(x, "*.yml", SearchOption.AllDirectories));
+
+    var items = new List<IItemData>();
+
+    foreach (var file in files)
+    {
+        using (var reader = File.OpenRead(file))
+        {
+            var item = serializer.ReadSerializedItem(reader, file);
+            items.Add(item);
+        }
+    }
+
+    var itemsLookup = items.ToLookup(x => x.ParentId, x => x);
+
+    var templates = items.Where(x => x.TemplateId == Sitecore.TemplateIDs.Template.Guid);
+
+    return templates.Select(template => new TemplateData
+    {
+        Template = template,
+        Fields = GetFields(template.Id, itemsLookup)
+    });
+}
+
+public IList<IItemData> GetSections(Guid templateId, ILookup<Guid, IItemData> lookup)
+{
+    return lookup[templateId].Where(x => x.TemplateId == Sitecore.TemplateIDs.TemplateSection.Guid).ToList();
+}
+
+public IList<IItemData> GetFields(Guid templateId, ILookup<Guid, IItemData> lookup)
+{
+    var sectionIds = GetSections(templateId, lookup).Select(x => x.Id);
+    return sectionIds.SelectMany(x => lookup[x].Where(item => item.TemplateId == Sitecore.TemplateIDs.TemplateField.Guid).ToList()).ToList();
+}
+
+public class TemplateData
+{
+    public IItemData Template { get; set; }
+    public IEnumerable<IItemData> Fields { get; set; }
+}
+
+private string IgnoreNamespacePath { get; set; }
+private string BaseNamespace { get; set; }
+private string CustomNamespace { get; set; }
+private IEnumerable<string> Configurations { get; set; }
+
+#>

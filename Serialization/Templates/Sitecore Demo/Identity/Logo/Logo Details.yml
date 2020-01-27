@@ -1,0 +1,14 @@
+﻿---
+ID: "c3be0f56-1b20-4ba3-b9cd-fef973eefbec"
+Parent: "7e814d8e-bdd0-440b-adf4-922583fe36ae"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Sitecore Demo/Identity/Logo/Logo Details
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200125T174920Z

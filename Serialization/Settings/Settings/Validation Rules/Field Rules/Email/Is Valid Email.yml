@@ -1,0 +1,24 @@
+﻿---
+ID: "65ecf30b-f005-4960-8558-5139c670429a"
+Parent: "b19c9463-0bb3-4934-87e9-3a1009f5447c"
+Template: "8f8e2549-c77f-4860-b83b-54fa31e2befa"
+Path: /sitecore/system/Settings/Validation Rules/Field Rules/Email/Is Valid Email
+DB: master
+SharedFields:
+- ID: "43a829d1-43da-465c-b772-ebaa0d515e3e"
+  Hint: Type
+  Value: Sitecore.Modules.EmailCampaign.Core.FieldValidators.EmailFieldValidator,Sitecore.EmailCampaign
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120716T144400
+    - ID: "58014183-26fe-4568-b19f-c26745824c32"
+      Hint: Description
+      Value: Provide a valid email address.
+    - ID: "da43c533-cbae-43d0-9019-65b1e346f984"
+      Hint: Title
+      Value: Is Valid Email

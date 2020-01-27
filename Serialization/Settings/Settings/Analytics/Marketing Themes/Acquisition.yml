@@ -1,0 +1,21 @@
+﻿---
+ID: "b75d8686-8244-42d2-9749-1ce8b2d65755"
+Parent: "968f8ae7-6244-43af-9dbe-c721a513451c"
+Template: "6231ce44-8c45-47c1-9c82-68d45f9ccde7"
+Path: /sitecore/system/Settings/Analytics/Marketing Themes/Acquisition
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180226T025819Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "d162443e-28d2-4080-8a57-66be3be6a546"
+      Hint: Name
+      Value: Acquisition

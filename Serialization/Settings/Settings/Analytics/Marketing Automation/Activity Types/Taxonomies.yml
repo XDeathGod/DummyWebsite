@@ -1,0 +1,14 @@
+﻿---
+ID: "37a585de-e4b7-49a1-9385-e31e2713d444"
+Parent: "2df0885c-7154-470d-b5cf-275b84b24248"
+Template: "3d1a6238-15db-4f10-804e-5a90997df783"
+Path: /sitecore/system/Settings/Analytics/Marketing Automation/Activity Types/Taxonomies
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20161226T104708Z

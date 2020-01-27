@@ -1,0 +1,14 @@
+﻿---
+ID: "59e5495f-57c2-429e-b92b-13453548aa39"
+Parent: "5d6107f6-7000-454c-b8dd-d91491dc598a"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Sitecore Demo/Common/City/City Details
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200125T181806Z

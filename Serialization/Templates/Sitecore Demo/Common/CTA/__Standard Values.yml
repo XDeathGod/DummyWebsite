@@ -1,0 +1,25 @@
+﻿---
+ID: "964268d4-b734-4326-bcda-6f86bd773ebd"
+Parent: "8da8f87a-c146-4aad-b571-b5f7f2c54f3f"
+Template: "8da8f87a-c146-4aad-b571-b5f7f2c54f3f"
+Path: /sitecore/templates/Sitecore Demo/Common/CTA/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/signpost.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200125T180133Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "f80b119f-a553-4514-94c0-96fe6f8772c2"
+      Hint: Text
+      Value: $name
