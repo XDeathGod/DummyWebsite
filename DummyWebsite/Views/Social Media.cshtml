@@ -1,0 +1,62 @@
+﻿@using Sitecore
+@using Sitecore.Mvc
+@using Sitecore.Data
+@using Sitecore.Data.Items
+@using DummyWebsite
+
+@{ 
+    Database currentDb = Sitecore.Context.Database;
+    Item homeItem = currentDb.GetItem("{4EE07053-BE8F-4756-9A32-EF70E2C5DC20}"); //Get the item /sitecore/content/Home
+
+    Item locationItem1 = currentDb.GetItem("{B01A617E-F7D8-4D9A-8595-BE0BB7E2E6EA}");
+    Item locationItem2 = currentDb.GetItem("{5E708194-6B99-4BD4-803F-90AF1FE053AA}");
+}
+
+<div class="contact_location">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <div class="location_left">
+                    <div class="logo">
+                        @*<a href="index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>*@
+
+                        @Html.Sitecore().Field(Templates.Logo.Fields.Link_FieldName,homeItem,new { text = @Html.Sitecore().Field
+                              (Templates.Logo.Fields.Image_FieldName,homeItem)})
+                    </div>
+                    <ul>
+                        <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                        <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li>
+                        <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                        <li><a href="#"> <i class="fa fa-youtube"></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3">
+                <div class="single_location">
+                    <h3>
+                        @Html.Sitecore().Field(Templates.LocationItem.Fields.Icon_FieldName,locationItem1)
+                        @Html.Sitecore().Field(Templates.LocationItem.Fields.Title_FieldName,locationItem1)
+                    </h3>
+                    <p>
+                        @Html.Sitecore().Field(Templates.LocationItem.Fields.Address_FieldName, locationItem1)
+
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3">
+                <div class="single_location">
+                    <h3>
+                        @Html.Sitecore().Field(Templates.LocationItem.Fields.Icon_FieldName, locationItem2)
+                        @Html.Sitecore().Field(Templates.LocationItem.Fields.Title_FieldName, locationItem2)
+                    </h3>
+                    <p>
+                        @Html.Sitecore().Field(Templates.LocationItem.Fields.Address_FieldName, locationItem2)
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

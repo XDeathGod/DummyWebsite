@@ -295,6 +295,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Footer.cshtml" />
     <Content Include="Views\Footer Navigation.cshtml" />
+    <Content Include="Views\Social Media.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
