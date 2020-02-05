@@ -296,6 +296,7 @@
     <Content Include="Views\Footer.cshtml" />
     <Content Include="Views\Footer Navigation.cshtml" />
     <Content Include="Views\Social Media.cshtml" />
+    <Content Include="Views\EstimatesForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

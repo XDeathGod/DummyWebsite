@@ -1,0 +1,106 @@
+﻿@using  Sitecore
+@using Sitecore.Data
+@using Sitecore.Data.Items
+@using Sitecore.Mvc
+@using DummyWebsite
+
+@{
+    // Get the current db
+    Sitecore.Data.Database currentDb = Sitecore.Context.Database;
+
+    //Get the Items
+    Item deliveryCity = currentDb.GetItem("{14598075-FD7E-4C68-BE78-7605C4F1E7B5}");
+
+    Item departureCity = currentDb.GetItem("{A8C3E397-2AF0-4D5A-BF86-94F3EDE0F66D}");
+
+    Item productSizes = currentDb.GetItem("{D8F570B3-4DB9-433C-8640-9527C5459038}");
+
+    Item productTypes = currentDb.GetItem("{3A7F815C-6ED9-4885-947D-03213E39D240}");
+
+    Item estimationSummary = currentDb.GetItem("{EB73F68E-D7A2-435D-BABD-CBCD999B1B09}");
+
+}
+<div class="Estimate_area overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-5">
+                <div class="Estimate_info">
+                    <h3>@Sitecore.Globalization.Translate.Text("GetFreeEstimate")</h3>
+                   @Html.Sitecore().Field("Summary",estimationSummary)
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-7">
+                <div class="form">
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="input_field">
+                                    <input type="text" placeholder="@Sitecore.Globalization.Translate.Text("YourName")">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="input_field">
+                                    <input type="email" placeholder="@Sitecore.Globalization.Translate.Text("Email")">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="input_field">
+                                    <select class="wide">
+                                        <option data-display="@Sitecore.Globalization.Translate.Text("ProductType")">@Sitecore.Globalization.Translate.Text("ProductType")</option>
+                                        @foreach (Item item in productTypes.GetChildren())
+                                        {
+                                            <option value="@item.Fields["Text"]">@item.Fields["Value"]</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="input_field">
+                                    <select class="wide">
+                                        <option data-display="@Sitecore.Globalization.Translate.Text("ProductSize")">@Sitecore.Globalization.Translate.Text("ProductSize")</option>
+                                        @foreach (Item item in productSizes.GetChildren())
+                                        {
+                                            <option value="@item.Fields["Text"]">@item.Fields["Value"]</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="input_field">
+                                    <select class="wide">
+                                        <option data-display="@Sitecore.Globalization.Translate.Text("DepartureCity")">@Sitecore.Globalization.Translate.Text("DepartureCity")</option>
+                                        @foreach (Item item in departureCity.GetChildren())
+                                        {
+                                            <option value="@item.Fields["City Code"]">@item.Fields["City Name"]</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="input_field">
+                                    <select class="wide">
+                                        <option data-display="@Sitecore.Globalization.Translate.Text("DeliveryCity")">@Sitecore.Globalization.Translate.Text("DeliveryCity")</option>
+                                        @foreach (Item item in deliveryCity.GetChildren())
+                                        {
+                                            <option value="@item.Fields["City Code"]">@item.Fields["City Name"]</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="input_field">
+                                    <textarea placeholder="@Sitecore.Globalization.Translate.Text("Message")"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="input_field">
+                                    <button class="boxed-btn3-line" type="submit">@Sitecore.Globalization.Translate.Text("SendEstimates")</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
