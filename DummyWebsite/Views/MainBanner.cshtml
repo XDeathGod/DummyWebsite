@@ -1,0 +1,40 @@
+﻿@using Sitecore
+@using Sitecore.Data
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Mvc
+@using Sitecore.Data.Items
+@using DummyWebsite
+
+@{ 
+    //extract the current db
+    Sitecore.Data.Database database = Sitecore.Context.Database;    string datasource = RenderingContext.Current.Rendering.DataSource;    Item item = database.GetItem(datasource);
+
+    Sitecore.Data.Fields.ImageField image = item.Fields["Image"];
+
+    string imagePath = Sitecore.Resources.Media.MediaManager.GetMediaUrl(image.MediaItem);
+
+}
+
+<style>
+    .slider_bg_1 {
+    background-image: url(@imagePath);
+}
+</style>
+
+<div class="slider_area">
+    <div class="single_slider  d-flex align-items-center slider_bg_1">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-xl-8">
+                    <div class="slider_text text-center justify-content-center">
+                        <p>@Html.Sitecore().Field("Title",item)</p>
+                        <h3>
+                           @Html.Sitecore().Field("HeadLine",item)
+                        </h3>
+                        @Html.Sitecore().Field("Link", item, new { @class = "boxed-btn3" , text = @Html.Sitecore().Field("Text",item)  } )                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

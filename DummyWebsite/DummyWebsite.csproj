@@ -171,6 +171,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Unicorn.cs</LastGenOutput>
     </Content>
+    <Content Include="Banners_Templates .tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Banners_Templates .cs</LastGenOutput>
+    </Content>
     <Content Include="SocialMedia_Templates.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SocialMedia_Templates.cs</LastGenOutput>
@@ -232,6 +236,11 @@
       <DependentUpon>Unicorn.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Banners_Templates .cs">
+      <DependentUpon>Banners_Templates .tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="SocialMedia_Templates.cs">
       <DependentUpon>SocialMedia_Templates.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -297,6 +306,7 @@
     <Content Include="Views\Footer Navigation.cshtml" />
     <Content Include="Views\Social Media.cshtml" />
     <Content Include="Views\EstimatesForm.cshtml" />
+    <Content Include="Views\MainBanner.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
