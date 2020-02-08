@@ -1,0 +1,23 @@
+﻿---
+ID: "d68e8755-28ae-45e9-b46e-2d6828ee2f3c"
+Parent: "59bf5846-3c47-43ee-bfb6-41463abf8ae3"
+Template: "59bf5846-3c47-43ee-bfb6-41463abf8ae3"
+Path: /sitecore/templates/Sitecore Demo/Containers/FactNFigures Folder/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{753BB32C-9C38-4734-BBDB-7F1F80CCA470}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200208T174131Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

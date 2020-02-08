@@ -175,6 +175,14 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Banners_Templates .cs</LastGenOutput>
     </Content>
+    <Content Include="Facts_Templates.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Facts_Templates.cs</LastGenOutput>
+    </Content>
+    <Content Include="Testimonial_Templates.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Testimonial_Templates.cs</LastGenOutput>
+    </Content>
     <Content Include="SocialMedia_Templates.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SocialMedia_Templates.cs</LastGenOutput>
@@ -238,6 +246,16 @@
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Banners_Templates .cs">
       <DependentUpon>Banners_Templates .tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Facts_Templates.cs">
+      <DependentUpon>Facts_Templates.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Testimonial_Templates.cs">
+      <DependentUpon>Testimonial_Templates.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -307,6 +325,12 @@
     <Content Include="Views\Social Media.cshtml" />
     <Content Include="Views\EstimatesForm.cshtml" />
     <Content Include="Views\MainBanner.cshtml" />
+    <Content Include="Views\FeaturedServices.cshtml" />
+    <Content Include="Views\SafeSecureTagLine.cshtml" />
+    <Content Include="Views\TestimonialSection.cshtml" />
+    <Content Include="Views\FactsSection.cshtml" />
+    <Content Include="Views\About.cshtml" />
+    <Content Include="Views\InnerBanner.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

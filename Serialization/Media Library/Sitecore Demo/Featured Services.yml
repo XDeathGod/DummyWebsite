@@ -1,0 +1,18 @@
+﻿---
+ID: "208a6174-e5a2-4267-885c-44b1a4cf3e79"
+Parent: "a6769d22-789c-4114-8632-c8ce2a3d5bf0"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Sitecore Demo/Featured Services
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200208T055522Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

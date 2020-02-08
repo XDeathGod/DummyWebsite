@@ -1,0 +1,45 @@
+﻿@using Sitecore
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Data.Items
+@using Sitecore.Data
+@using DummyWebsite
+
+@{
+    Database currentDb = Sitecore.Context.Database;
+
+    // string datasource = RenderingContext.Current.Rendering.DataSource;
+
+
+    Item item = currentDb.GetItem("{31FA5AB0-B654-4FAB-AFF6-E4E1894537F9}");
+
+
+}
+
+<div class="chose_area ">
+    <div class="container">
+        <div class="features_main_wrap">
+            <div class="row  align-items-center">
+                <div class="col-xl-5 col-lg-5 col-md-6">
+                    <div class="about_image">
+                        @Html.Sitecore().Field(Templates.AboutItem.Fields.Image_FieldName, item)
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="features_info">
+                        <h3>@Html.Sitecore().Field(Templates.AboutItem.Fields.Title_FieldName, item)</h3>
+                        @Html.Sitecore().Field(Templates.Summary.Fields.Summary_FieldName, item)
+
+                        <div class="about_btn">
+                            @Html.Sitecore().Field(Templates.CTA.Fields.Link_FieldName, item, new
+                            {
+                                text = @Html.Sitecore().Field(
+                                          Templates.CTA.Fields.Text_FieldName, item),
+                                @class = "boxed-btn3-line"
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

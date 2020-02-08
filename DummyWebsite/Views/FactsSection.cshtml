@@ -1,0 +1,33 @@
+﻿@using Sitecore
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Data
+@using Sitecore.Data.Items
+@using DummyWebsite
+
+@{ 
+    Database currentDb = Sitecore.Context.Database;
+
+    string datasource = RenderingContext.Current.Rendering.DataSource;
+
+    Item item = currentDb.GetItem(datasource);
+}
+
+<div class="counter_area">
+    <div class="container">
+        <div class="offcan_bg">
+            <div class="row">
+                @foreach (Item childItem in item.GetChildren())
+                {
+                    <div class="col-xl-3 col-md-3">
+                        <div class="single_counter text-center">
+                            <h3> <span class="counter">@Html.Sitecore().Field(Templates.FactNFiguresItem.Fields.SuccessFigure_FieldName,childItem)</span> <span>+</span> </h3>
+                            <p>@Html.Sitecore().Field(Templates.FactNFiguresItem.Fields.SupportingText_FieldName,childItem)</p>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+
+    </div>
+</div>

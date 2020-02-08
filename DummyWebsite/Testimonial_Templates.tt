@@ -1,0 +1,25 @@
+<#@ template debug="true" hostspecific="true" language="c#" #>
+<#@ output extension=".cs" encoding="utf-8" #>
+
+<#@ include file="Codegen\Assemblies.tt" #>
+
+<#
+
+var layer="Sitecore Demo";
+var model ="Testimonials";
+
+IgnoreNamespacePath = "/sitecore/templates/"+layer+"/"+model+"";
+BaseNamespace = System.Runtime.Remoting.Messaging.CallContext.LogicalGetData("NamespaceHint").ToString();
+CustomNamespace = "";
+
+var solutionPath = "I:\\Logistic\\DummyWebsite\\";
+
+Configurations = new string[]
+{
+    solutionPath + "serialization\\Templates\\"+layer+"\\"+model+""
+};
+
+#>
+
+<#@ include file="Codegen\Unicorn.tt" #>
+

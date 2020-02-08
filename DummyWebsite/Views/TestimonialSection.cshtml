@@ -1,0 +1,52 @@
+﻿
+@using Sitecore
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Mvc
+@using Sitecore.Data
+@using Sitecore.Data.Items
+@using DummyWebsite
+
+@{ 
+    Database currentDb = Sitecore.Context.Database;
+
+    string datasource = RenderingContext.Current.Rendering.DataSource;
+    Item item = currentDb.GetItem(datasource);
+
+}
+<style>
+    .testimonial_area {
+        background-image: url(https://demosc.dev.local/-/media/Sitecore%20Demo/Testimonials/testmonial);
+    }
+</style>
+<div class="testimonial_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-7">
+                <div class="testmonial_active owl-carousel">
+
+                    @foreach (Item childitem in item.GetChildren())
+                    {
+                        <div class="single_carousel">
+                            <div class="single_testmonial text-center">
+                                <div class="quote">
+                                    <img src="https://demosc.dev.local/-/media/Sitecore%20Demo/Testimonials/quote" alt="">
+                                </div>
+                                <p>
+                                    @Html.Sitecore().Field(Templates.TestimonialItem.Fields.TestimonialText_FieldName, childitem)
+                                </p>
+                                <div class="testmonial_author">
+                                    <div class="thumb">
+                                        @Html.Sitecore().Field(Templates.TestimonialItem.Fields.CustomerImage_FieldName, childitem)
+                                    </div>
+                                    <h3>@Html.Sitecore().Field(Templates.TestimonialItem.Fields.CustomerName_FieldName, childitem)</h3>
+                                    <span>@Html.Sitecore().Field(Templates.TestimonialItem.Fields.Designation_FieldName, childitem)</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
